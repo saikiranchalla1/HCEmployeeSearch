@@ -1,0 +1,24 @@
+﻿<div class="panel-body">
+    <div class="form-group">
+        <label>First Name</label>
+        <input class="form-control" ng-model="currentEmployee.FirstName">
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input class="form-control" ng-model="currentEmployee.LastName">
+    </div>
+    <div class="form-group">
+        <label>Address</label>
+        <input class="form-control" ng-model="currentEmployee.Address" type="text">
+    </div>
+    <div class="form-group">
+        <label>Age</label>
+        <input class="form-control" ng-model="currentEmployee.Age" type="number">
+    </div>
+    <div class="form-group">
+        <label>Hobbies</label>
+        <input class="form-control" ng-model="currentEmployee.Hobbies">
+    </div>
+    <button class="btn btn-primary" ng-click="saveEdit(currentEmployee)">Save</button>
+    <button class="btn btn-primary" ng-click="cancelEdit()">Cancel</button>
+</div>

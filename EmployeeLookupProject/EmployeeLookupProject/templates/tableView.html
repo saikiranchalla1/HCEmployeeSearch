@@ -1,0 +1,38 @@
+﻿<div class="panel-body">
+    <div class="form-group">
+        <label>Search</label>
+        <input class="form-control" ng-model="search" type="search">
+    </div>
+    <br /><br />
+    <table class="table table-bordered table-striped">
+        <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>Age</th>
+            <th>Hobbies</th>
+            <th>Picture</th>
+            <th></th>
+        </thead>
+        <tbod>
+            <tr ng-repeat="employee in employees | filter : search">
+                <td>{{employee.FirstName}}</td>
+                <td>{{employee.LastName}}</td>
+                <td>{{employee.Address}}</td>
+                <td>{{employee.Age}}</td>
+                <td>{{employee.Hobbies}}</td>
+                <td><img src="{{employee.Picture}}"/></td>
+                <td class="text-center">
+                    <button class="btn btn-xs btn-primary" ng-click="deleteEmployee(employee)">Delete</button>
+                    <button class="btn btn-xs btn-primary" ng-click="editOrCreateEmployee(employee)">Edit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <button class="btn btn-primary" ng-click="listEmployees()">Refresh</button>
+        <button class="btn btn-primary" ng-click="editOrCreateEmployee()">New</button>
+    </div>
+    <div>
+    </div>
+</div>

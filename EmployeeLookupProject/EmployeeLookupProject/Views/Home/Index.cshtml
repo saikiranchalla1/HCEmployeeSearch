@@ -1,0 +1,8 @@
+﻿<div>
+    <div class="panel panel-primary" ng-controller="myCtrl">
+        <h3 class="panel-heading">Employee Search</h3>
+        <ng-include src="'templates/tableView.html'" ng-show="displayMode == 'list'"></ng-include>
+        <ng-include src="'templates/editorView.html'" ng-show="displayMode == 'edit'"></ng-include>
+    </div>
+</div>
+
